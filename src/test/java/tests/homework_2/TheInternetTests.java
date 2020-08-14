@@ -1,4 +1,4 @@
-package tests.homework_1;
+package tests.homework_2;
 
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selectors.byText;
@@ -60,6 +60,4 @@ public class TheInternetTests extends BaseTest {
         sleep(500);
         $("#checkboxes").$$("input").first().is(not(checked));
     }
-
-
 }
