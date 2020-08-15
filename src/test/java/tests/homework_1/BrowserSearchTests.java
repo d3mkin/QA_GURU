@@ -16,16 +16,20 @@ public class BrowserSearchTests {
     String searchLink = "https://ru.selenide.org/";
 
     @Test
-    void GoogleSearchTest() {
+    void googleSearchTest() {
         open("https://google.com");
+        
         $(byName("q")).setValue(searchText).pressEnter();
-        $("#search a").shouldBe(visible).shouldHave(attribute("href", searchLink));
+        
+        $("#search a").shouldHave(attribute("href", searchLink));
     }
 
     @Test
-    void  YandexSearchTest() {
+    void yandexSearchTest() {
         open("https://yandex.ru");
+        
         $(byName("text")).setValue(searchText).pressEnter();
-        $("#search-result a").shouldBe(visible).shouldHave(attribute("href", searchLink));
+        
+        $("#search-result a").shouldHave(attribute("href", searchLink));
     }
 }
