@@ -5,7 +5,10 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 
-
+/**
+ * Домашнее задание:
+ * Напишите еще 5 автотестов. На свой вкус - поиск, авторизация, корзина интернет-магазина
+ */
 public class TheInternetTests extends BaseTest {
 
     @Test
