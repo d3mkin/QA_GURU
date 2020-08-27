@@ -13,6 +13,6 @@ public class TestsForJenkins {
         String a = "Hello, Jenkins!";
         String b = "Hello, Jenkins!";
 
-        assert(a.equals(b));
+        assertEquals(a,b, "Hello, Jenkins!");
     }
 }
