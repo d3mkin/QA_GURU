@@ -15,6 +15,7 @@ dependencies {
     testCompile "org.junit.jupiter:junit-jupiter-api:5.6.2"
     testCompile "org.junit.jupiter:junit-jupiter-engine:5.6.2"
     compile "com.codeborne:selenide:5.13.1"
+    testImplementation "ch.qos.logback:logback-classic:1.2.3"
 }
 
 test {
@@ -25,8 +26,25 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-task jenkins_tests(type: Test) {
+tasks.withType(Test) {
+    systemProperties = System.properties
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+task simpleTest(type: Test) {
     useJUnitPlatform {
-        includeTags 'stringTest'
+        includeTags 'simpleStringTest'
+    }
+}
+
+task paramTest(type: Test) {
+    useJUnitPlatform {
+        includeTags 'parameterizedStringTest'
     }
 }
