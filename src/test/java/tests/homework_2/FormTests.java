@@ -3,9 +3,7 @@ package tests.homework_2;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import tests.BaseTest;
-
 import java.io.File;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
