@@ -1,7 +1,6 @@
 package tests.homework_2;
 
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
 import tests.BaseTest;
 
 import java.io.File;
@@ -25,8 +24,6 @@ public class FormTests extends BaseTest {
                 email = "jb@gmail.com",
                 gender = "Male",
                 mobileNumber = "9157151515",
-                birthDay = "MAY 21",
-                birthYear = "1990",
                 subjects = "Computer Science",
                 hobbies = "Sports",
                 address = "www.leningrad.spb.ru",
@@ -41,8 +38,6 @@ public class FormTests extends BaseTest {
         $("#userEmail").setValue(email);
         $("#genterWrapper").$(byText(gender)).click();
         $("#userNumber").setValue(mobileNumber);
-        $("#dateOfBirthInput").sendKeys(Keys.CONTROL + "A");
-//        $("#dateOfBirthInput").setValue(birthDay + " " + birthYear).pressEnter();
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("May");
         $(".react-datepicker__year-select").selectOption("1990");
