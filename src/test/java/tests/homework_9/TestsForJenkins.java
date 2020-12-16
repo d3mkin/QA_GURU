@@ -1,4 +1,4 @@
-package tests.homework_7;
+package tests.homework_9;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
